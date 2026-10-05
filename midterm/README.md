@@ -53,3 +53,4 @@ The project uses:
 Rental prices, customer reviews, and booking information are fictional and are used only for demonstration purposes.
 
 The order form does not send data to a server and does not process real bookings or payments.
+.
