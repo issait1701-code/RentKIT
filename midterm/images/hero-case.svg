@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="640" viewBox="0 0 800 640">
+ <title>An open RentKit equipment case</title>
+ <desc>A phone tripod, LED light, microphone, cables and adapters sit in a fitted carrying case.</desc>
+ <defs>
+  <pattern id="foam" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#373d37"/><circle cx="2" cy="2" r=".8" fill="#485147"/></pattern>
+  <pattern id="grille" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#d9d8cc"/><path d="M0 3h6M3 0v6" stroke="#848e83" stroke-width="1"/></pattern>
+ </defs>
+ <ellipse cx="412" cy="556" rx="276" ry="25" fill="#1f3b32"/>
+ <g transform="rotate(-9 400 330)">
+  <path d="M149 136q0-24 24-24h458q24 0 24 24v197H149z" fill="#1d2420" stroke="#121b16" stroke-width="6"/>
+  <rect x="167" y="132" width="471" height="187" rx="15" fill="#4a5849" stroke="#62735c" stroke-width="3"/>
+  <rect x="184" y="149" width="437" height="153" rx="10" fill="#3c493d"/>
+  <path d="M203 173v101M229 173v101M255 173v101M281 173v101M307 173v101M333 173v101M359 173v101M385 173v101M411 173v101M437 173v101M463 173v101M489 173v101M515 173v101M541 173v101M567 173v101M593 173v101" stroke="#465443" stroke-width="12"/>
+  <rect x="292" y="189" width="222" height="70" rx="3" fill="#efede0"/>
+  <text x="315" y="225" font-family="Arial,sans-serif" font-weight="800" font-size="31" letter-spacing="-2" fill="#202322">RentKit.</text>
+  <text x="315" y="245" font-family="Arial,sans-serif" font-size="9" letter-spacing="2.3" fill="#294c42">READY WHEN YOU ARE</text>
+  <rect x="191" y="322" width="53" height="13" rx="3" fill="#91988b"/><rect x="561" y="322" width="53" height="13" rx="3" fill="#91988b"/>
+  <path d="M132 342q0-17 17-17h507q17 0 17 17v167q0 23-23 23H155q-23 0-23-23z" fill="#191f1c" stroke="#131b17" stroke-width="6"/>
+  <rect x="145" y="337" width="514" height="158" rx="13" fill="url(#foam)" stroke="#687460" stroke-width="3"/>
+  <rect x="165" y="351" width="130" height="122" rx="11" fill="#202720"/>
+  <rect x="306" y="351" width="119" height="122" rx="11" fill="#202720"/>
+  <rect x="437" y="351" width="90" height="122" rx="11" fill="#202720"/>
+  <rect x="539" y="351" width="101" height="122" rx="11" fill="#202720"/>
+  <!-- LED light and its adjustable foot. -->
+  <rect x="175" y="362" width="110" height="72" rx="7" fill="#e3e2d5" stroke="#90998b" stroke-width="3"/>
+  <rect x="187" y="373" width="86" height="49" rx="3" fill="#f9f1d5"/>
+  <path d="M194 386h72M194 399h72M201 378v38M217 378v38M233 378v38M249 378v38M265 378v38" stroke="#dfd5b5" stroke-width="2"/>
+  <path d="M220 435v19h20v-19M230 454v11" stroke="#b8bdae" stroke-width="5" fill="none"/>
+  <!-- Folded phone tripod, with an empty phone clamp. -->
+  <path d="M353 394v63M353 415l-29 49M358 415l31 49" stroke="#b9bdae" stroke-width="9" stroke-linecap="round"/>
+  <rect x="329" y="364" width="56" height="32" rx="5" fill="#596351" stroke="#b9bdae" stroke-width="3"/>
+  <path d="M338 369v21M376 369v21" stroke="#e0dfcf" stroke-width="4"/>
+  <!-- Microphone with mesh head. -->
+  <rect x="456" y="362" width="51" height="54" rx="17" fill="url(#grille)" stroke="#b9bdae" stroke-width="2"/>
+  <rect x="468" y="410" width="26" height="45" rx="5" fill="#798470"/>
+  <rect x="475" y="423" width="12" height="17" rx="3" fill="#293329"/>
+  <path d="M481 455v10" stroke="#b9bdae" stroke-width="5"/>
+  <!-- Coiled cable and two adapters. -->
+  <ellipse cx="587" cy="397" rx="32" ry="27" fill="none" stroke="#b9bdae" stroke-width="6"/>
+  <ellipse cx="587" cy="397" rx="22" ry="17" fill="none" stroke="#b9bdae" stroke-width="4"/>
+  <path d="M615 407v28h-22" fill="none" stroke="#b9bdae" stroke-width="4"/>
+  <rect x="578" y="430" width="18" height="11" rx="2" fill="#f36b32"/>
+  <rect x="553" y="448" width="30" height="11" rx="3" fill="#dadbc9"/><rect x="599" y="448" width="25" height="11" rx="3" fill="#dadbc9"/>
+  <rect x="163" y="503" width="43" height="34" rx="4" fill="#788473" stroke="#141d16" stroke-width="4"/>
+  <rect x="601" y="503" width="43" height="34" rx="4" fill="#788473" stroke="#141d16" stroke-width="4"/>
+  <path d="M346 529v24q0 10 10 10h93q10 0 10-10v-24" fill="none" stroke="#131b17" stroke-width="13"/>
+  <path d="M346 533h113" stroke="#86927a" stroke-width="3"/>
+  <rect x="477" y="500" width="95" height="25" rx="3" fill="#f36b32"/>
+  <text x="489" y="517" font-family="Arial,sans-serif" font-weight="700" font-size="11" letter-spacing="1" fill="#202322">KIT 01 / VIDEO</text>
+ </g>
+ <g fill="#e8eedf" font-family="Arial,sans-serif" font-size="14">
+  <text x="49" y="375">LED light</text><path d="M53 387h65l65 9" fill="none" stroke="#a4b69b"/>
+  <text x="640" y="273">Microphone</text><path d="M637 283h-42l-98 64" fill="none" stroke="#a4b69b"/>
+  <text x="579" y="562">Cables + adapters</text><path d="M575 549l-12-62" fill="none" stroke="#a4b69b"/>
+ </g>
+ <g transform="rotate(12 669 137)"><circle cx="669" cy="137" r="58" fill="#f36b32"/><text x="669" y="124" text-anchor="middle" fill="#202322" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1">ONE KIT.</text><text x="669" y="144" text-anchor="middle" fill="#202322" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1">MORE</text><text x="669" y="164" text-anchor="middle" fill="#202322" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1">POSSIBILITIES.</text></g>
+</svg>

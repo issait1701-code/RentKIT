@@ -1,0 +1,50 @@
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.catalog-card {
+  scroll-margin-top: 1.5rem;
+}
+
+.catalog-card .card-body {
+  padding: 1.8rem;
+}
+
+.catalog-card .card-text {
+  margin-bottom: .8rem;
+}
+
+.contents-line {
+  font-size: .8rem;
+  color: var(--green);
+  padding-block: .6rem 1rem;
+}
+
+.catalog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: 1.2rem;
+}
+
+.catalog-actions .btn {
+  font-size: .8rem;
+  padding: .7rem 1rem;
+}
+
+.catalog-note {
+  padding-block: 2rem 0;
+}
+
+@media (max-width: 650px) {
+  .catalog-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .catalog-card .card-body {
+    padding: 1.4rem;
+  }
+}

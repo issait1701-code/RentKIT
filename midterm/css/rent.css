@@ -1,0 +1,134 @@
+.process-layout {
+  display: grid;
+  grid-template-columns: .65fr 1.35fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.process-aside {
+  padding: 1.8rem;
+  background: var(--green);
+  color: var(--paper);
+  border-radius: var(--radius);
+}
+
+.process-aside p {
+  font-size: .85rem;
+  color: #e0e9df;
+}
+
+.process-aside .tag {
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+}
+
+.process-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: rental;
+}
+
+.process-list li {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1.3rem;
+  counter-increment: rental;
+  padding: 0 0 1.8rem;
+  margin-bottom: 1.8rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.process-list li::before {
+  content: '0' counter(rental);
+  font-family: 'Space Grotesk', Arial, sans-serif;
+  font-size: 2.2rem;
+  color: var(--green);
+}
+
+.process-list h2 {
+  font-size: 1.45rem;
+}
+
+.process-list p {
+  font-size: .9rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.terms-panel {
+  padding: 2rem;
+  background: var(--sage);
+  border-radius: var(--radius);
+}
+
+.terms-panel h3 {
+  font-size: 1.15rem;
+}
+
+.terms-panel p {
+  font-size: .85rem;
+}
+
+.terms-panel .row {
+  --bs-gutter-y: 1rem;
+}
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 3rem;
+}
+
+.faq-list details {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-list details:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.faq-list summary {
+  padding: 1.2rem 2rem 1.2rem 0;
+  position: relative;
+  font-size: .9rem;
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: '+';
+  position: absolute;
+  right: .3rem;
+  top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.faq-list details[open] summary::after {
+  content: '−';
+}
+
+.faq-list details p {
+  color: var(--muted);
+  font-size: .85rem;
+  padding-right: 1rem;
+}
+
+@media (max-width: 800px) {
+
+  .process-layout,
+  .faq-layout {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .process-aside {
+    max-width: 600px;
+  }
+}
