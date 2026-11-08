@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/kits.css">
 
+  <script src="vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/catalog.js" defer></script>
 </head>
 
 <body>
@@ -35,7 +39,7 @@
 
     <div class="container">
       <header class="page-intro">
-        <p class="eyebrow">Four kits. Plenty of possibilities.</p>
+        <p class="eyebrow">Eight kits. Plenty of possibilities.</p>
         <h1>What do you<br>want to make happen?</h1>
         <p class="lead">Start with your plan. We’ve put the equipment together so you can focus on the good part.</p>
       </header>
@@ -43,70 +47,18 @@
           podcast</a><a href="#movie">Plan a movie night</a><a href="#presentation">Give a presentation</a></nav>
       <section aria-labelledby="catalog-title">
         <h2 id="catalog-title" class="visually-hidden">All equipment kits</h2>
-        <div class="catalog-grid">
-          <article id="video" class="card kit-card catalog-card">
-            <img class="kit-image" src="images/video-kit.svg"
-              alt="Phone tripod with an empty clamp, LED light, microphone, cables and adapters" width="800"
-              height="560" loading="lazy">
-            <div class="card-body"><span class="tag">KIT 01 / FILM A PROJECT</span>
-              <h3>Video Project Kit</h3>
-              <p class="card-text">Your phone. A steadier shot. A story worth telling.</p>
-              <p class="contents-line">Phone tripod · Microphone · LED light · Cables & adapters</p>
-              <p class="small-note"><strong>You bring:</strong> Your compatible phone, a charged battery and your idea.
-              </p>
-              <div class="card-bottom"><span class="price">5 000 ₸ <small>/ 1 day</small></span></div>
-              <div class="catalog-actions"><a class="btn btn-outline" href="kit-details.html#video">See what’s inside
-                  <span aria-hidden="true">↗</span></a><a class="btn btn-primary" href="order.html?kit=video">Book this
-                  kit <span aria-hidden="true">→</span></a></div>
-            </div>
-          </article>
-          <article id="podcast" class="card kit-card catalog-card">
-            <img class="kit-image" src="images/podcast-kit.svg"
-              alt="Two microphones on desk stands, headphones, recording device and cables" width="800" height="560"
-              loading="lazy">
-            <div class="card-body"><span class="tag">KIT 02 / RECORD A PODCAST</span>
-              <h3>Podcast Kit</h3>
-              <p class="card-text">Two voices, one conversation, all the right connections.</p>
-              <p class="contents-line">Two microphones · Stands · Headphones · Recorder & cables</p>
-              <p class="small-note"><strong>You bring:</strong> Your conversation plan and a quiet place to record.</p>
-              <div class="card-bottom"><span class="price">7 000 ₸ <small>/ 1 day</small></span></div>
-              <div class="catalog-actions"><a class="btn btn-outline" href="kit-details.html#podcast">See what’s inside
-                  <span aria-hidden="true">↗</span></a><a class="btn btn-primary" href="order.html?kit=podcast">Book
-                  this kit <span aria-hidden="true">→</span></a></div>
-            </div>
-          </article>
-          <article id="movie" class="card kit-card catalog-card">
-            <img class="kit-image" src="images/movie-kit.svg"
-              alt="Projector, portable screen, speaker and connection cables" width="800" height="560" loading="lazy">
-            <div class="card-body"><span class="tag">KIT 03 / PLAN A MOVIE NIGHT</span>
-              <h3>Movie Night Kit</h3>
-              <p class="card-text">Turn a free evening into a little cinema at home.</p>
-              <p class="contents-line">Projector · Portable screen · Speaker · Cables</p>
-              <p class="small-note"><strong>You bring:</strong> Your compatible video source, film and a suitable room.
-              </p>
-              <div class="card-bottom"><span class="price">8 000 ₸ <small>/ 1 day</small></span></div>
-              <div class="catalog-actions"><a class="btn btn-outline" href="kit-details.html#movie">See what’s inside
-                  <span aria-hidden="true">↗</span></a><a class="btn btn-primary" href="order.html?kit=movie">Book this
-                  kit <span aria-hidden="true">→</span></a></div>
-            </div>
-          </article>
-          <article id="presentation" class="card kit-card catalog-card">
-            <img class="kit-image" src="images/presentation-kit.svg"
-              alt="Projector, presentation clicker, coiled HDMI cable and adapters" width="800" height="560"
-              loading="lazy">
-            <div class="card-body"><span class="tag">KIT 04 / GIVE A PRESENTATION</span>
-              <h3>Presentation Kit</h3>
-              <p class="card-text">Bring your slides. We provide the presentation setup.</p>
-              <p class="contents-line">Projector · Clicker · HDMI cable · Adapters</p>
-              <p class="small-note"><strong>You bring:</strong> Your compatible laptop, slides and a projection surface.
-              </p>
-              <div class="card-bottom"><span class="price">6 000 ₸ <small>/ 1 day</small></span></div>
-              <div class="catalog-actions"><a class="btn btn-outline" href="kit-details.html#presentation">See what’s
-                  inside <span aria-hidden="true">↗</span></a><a class="btn btn-primary"
-                  href="order.html?kit=presentation">Book this kit <span aria-hidden="true">→</span></a></div>
-            </div>
-          </article>
-        </div>
+        <form id="catalog-controls" class="catalog-controls" role="search" aria-label="Find equipment">
+          <div><label class="form-label" for="search">Search equipment</label><input class="form-control" id="search" type="search" placeholder="Try microphone or projector"></div>
+          <div><label class="form-label" for="category">Category</label><select id="category" class="form-select"><option value="all">All categories</option><option value="video">Video</option><option value="audio">Audio</option><option value="cinema">Cinema</option><option value="presentation">Presentation</option></select></div>
+          <div><label class="form-label" for="budget">Daily budget</label><select id="budget" class="form-select"><option value="100000">Any price</option><option value="3000">Up to 3 000 ₸</option><option value="5000">Up to 5 000 ₸</option><option value="7000">Up to 7 000 ₸</option></select></div>
+          <div><label class="form-label" for="sort">Sort by</label><select id="sort" class="form-select"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name">Name: A–Z</option></select></div>
+          <button type="button" class="btn btn-outline" data-reset-catalog>Reset filters</button>
+        </form>
+        <p id="result-count" role="status" aria-live="polite"></p>
+        <noscript><p>Enable JavaScript to search the catalogue. You can still <a href="kit-details.html">view kit contents and prices</a>.</p></noscript>
+        <div id="catalog-empty" class="empty-state" hidden><h3>No kits match your plan yet.</h3><p>Try a shorter search or a larger budget.</p><button type="button" class="btn btn-outline" data-reset-catalog>Show all kits</button></div>
+        <div class="catalog-grid" id="catalog-grid"></div>
+        <p class="small-note">Illustrations show equipment families. The contents list defines exactly what each kit includes.</p>
         <p class="small-note catalog-note">Prices in KZT. Each displayed price covers one day. <a
             href="kit-details.html#prices">Compare total prices for 1, 3 and 7 days.</a></p>
       </section>
@@ -134,7 +86,7 @@
             the Kits</a></nav>
       </div>
       <div class="footer-bottom">
-        <p class="muted">Equipment rentals, made simple.</p>
+        <p class="muted">Student demo · no real bookings or payments.</p>
         <p class="muted">Astana, Kazakhstan · 2026</p>
       </div>
     </div>

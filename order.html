@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="vendor/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/order.css">
+  <script src="vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script src="js/data.js" defer></script>
   <script src="js/order.js" defer></script>
 </head>
 
@@ -42,17 +45,13 @@
       <noscript>
         <p class="noscript-note">Enable JavaScript to calculate your rental total and review your details.</p>
       </noscript>
-      <form id="booking-form" method="dialog" class="order-layout" aria-label="Kit booking">
+      <form id="booking-form" method="dialog" novalidate class="order-layout" aria-label="Kit booking">
         <div class="order-fields">
           <fieldset class="form-section">
             <legend><span class="section-letter" aria-hidden="true">A</span>Your kit</legend>
             <label class="form-label" for="kit">Choose your setup</label><select class="form-select" id="kit" required
               aria-describedby="kit-description">
               <option value="">Choose a kit</option>
-              <option value="video">Video Project Kit — 5 000 ₸ / 1 day</option>
-              <option value="podcast">Podcast Kit — 7 000 ₸ / 1 day</option>
-              <option value="movie">Movie Night Kit — 8 000 ₸ / 1 day</option>
-              <option value="presentation">Presentation Kit — 6 000 ₸ / 1 day</option>
             </select>
             <div class="kit-preview"><img id="kit-preview-image" class="case-placeholder" src="images/hero-case.svg"
                 alt="An open RentKit equipment case" width="800" height="640" loading="lazy">
@@ -100,6 +99,7 @@
                   required></div>
               <div class="col-12 col-md-6"><label class="form-label" for="email">Email</label><input
                   class="form-control" type="email" id="email" autocomplete="email" maxlength="150" required></div>
+              <div class="col-12"><label class="form-label" for="phone">Phone</label><input class="form-control" type="tel" id="phone" autocomplete="tel" maxlength="30" placeholder="+7 700 123 45 67" required><p class="field-help">Kazakhstan number: +7 or 8 and 10 digits.</p></div>
               <div class="col-12"><label class="form-label" for="comment">Optional comment</label><textarea
                   class="form-control" id="comment" rows="3" maxlength="500"
                   placeholder="For example: I’d like to check my phone’s connection."></textarea></div>
@@ -133,6 +133,8 @@
             </dl>
             <div class="summary-total"><span>Total</span><strong id="summary-total">—</strong></div>
           </div>
+          <p class="small-note" id="summary-return"></p>
+          <section class="pack-plan" aria-labelledby="pack-title"><h3 id="pack-title">Don’t forget your part.</h3><p class="small-note">Your personal packing checklist. Marks stay in this browser; contact details do not.</p><div id="pack-checklist"></div><p id="pack-progress" role="status"></p><button class="btn btn-outline" type="button" id="reset-checklist">Reset checklist</button></section>
           <p class="summary-explanation">KZT · total for your selected period. Pickup is free; delivery adds 2 000 ₸
             once. No other fees.</p><a class="text-link d-inline-block mt-3" href="kit-details.html#prices">View the
             price table <span aria-hidden="true">↗</span></a>
@@ -142,8 +144,9 @@
           <div class="form-check"><input class="form-check-input" type="checkbox" id="terms-agreed" required><label
               class="form-check-label" for="terms-agreed">I agree to the <a href="rent.html#terms">rental
                 conditions</a>.</label></div>
-          <div class="confirm-actions"><button class="btn btn-primary" id="confirm-booking" type="button"
-              disabled>Review booking <span aria-hidden="true">↗</span></button></div>
+          <div class="confirm-actions"><button class="btn btn-primary" id="confirm-booking" type="submit"
+              disabled>Confirm demo booking <span aria-hidden="true">↗</span></button></div>
+          <p class="small-note mt-3">Demo only: your contact details are not sent or stored.</p>
           <p id="form-error" class="form-error" role="alert"></p>
           <p id="booking-status" class="form-status" role="status" aria-live="polite" tabindex="-1"></p>
         </fieldset>
@@ -161,7 +164,7 @@
             the Kits</a></nav>
       </div>
       <div class="footer-bottom">
-        <p class="muted">Equipment rentals, made simple.</p>
+        <p class="muted">Student demo · no real bookings or payments.</p>
         <p class="muted">Astana, Kazakhstan · 2026</p>
       </div>
     </div>

@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/kit-details.css">
 
+  <script src="vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/details.js" defer></script>
 </head>
 
 <body>
@@ -259,6 +263,7 @@
           </div>
         </div>
       </section>
+      <div id="extra-details"></div>
       <section id="prices" class="pricing" aria-labelledby="prices-title">
         <p class="eyebrow">Pick the time you need</p>
         <h2 id="prices-title">One plan. One clear price.</h2>
@@ -272,31 +277,11 @@
               <th scope="col">7 days</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Video Project Kit</th>
-              <td>5 000 ₸</td>
-              <td>13 000 ₸</td>
-              <td>26 000 ₸</td>
-            </tr>
-            <tr>
-              <th scope="row">Podcast Kit</th>
-              <td>7 000 ₸</td>
-              <td>18 000 ₸</td>
-              <td>36 000 ₸</td>
-            </tr>
-            <tr>
-              <th scope="row">Movie Night Kit</th>
-              <td>8 000 ₸</td>
-              <td>21 000 ₸</td>
-              <td>42 000 ₸</td>
-            </tr>
-            <tr>
-              <th scope="row">Presentation Kit</th>
-              <td>6 000 ₸</td>
-              <td>15 000 ₸</td>
-              <td>30 000 ₸</td>
-            </tr>
+          <tbody id="price-rows">
+            <tr><th scope="row">Video Project Kit</th><td>5 000 ₸</td><td>13 000 ₸</td><td>26 000 ₸</td></tr>
+            <tr><th scope="row">Podcast Kit</th><td>7 000 ₸</td><td>18 000 ₸</td><td>36 000 ₸</td></tr>
+            <tr><th scope="row">Movie Night Kit</th><td>8 000 ₸</td><td>21 000 ₸</td><td>42 000 ₸</td></tr>
+            <tr><th scope="row">Presentation Kit</th><td>6 000 ₸</td><td>15 000 ₸</td><td>30 000 ₸</td></tr>
           </tbody>
         </table>
         <p class="small-note">Pickup: 0 ₸. Delivery: 2 000 ₸ per order, added once.</p>
@@ -322,7 +307,7 @@
             the Kits</a></nav>
       </div>
       <div class="footer-bottom">
-        <p class="muted">Equipment rentals, made simple.</p>
+        <p class="muted">Student demo · no real bookings or payments.</p>
         <p class="muted">Astana, Kazakhstan · 2026</p>
       </div>
     </div>

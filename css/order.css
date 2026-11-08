@@ -275,6 +275,14 @@ legend {
   display: none;
 }
 
+.pack-plan { border-block: 1px solid var(--line); margin-block: 1.5rem; padding-block: 1.2rem; }
+.packing-item { display: flex; align-items: start; gap: .7rem; font-size: .8rem; margin-bottom: 1rem; cursor: pointer; }
+.packing-item input { flex: 0 0 auto; width: 18px; height: 18px; margin-top: .2rem; }
+.packing-item:has(input:checked) span { text-decoration: line-through; color: var(--muted); }
+#pack-progress { color: var(--green); font-weight: 700; font-size: .8rem; }
+.form-status { border: 1px solid var(--green); }
+@media (max-width: 400px) { .pickup-options { grid-template-columns: 1fr; } }
+
 .noscript-note {
   padding: 1rem;
   background: #f5dfcf;

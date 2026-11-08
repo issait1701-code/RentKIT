@@ -44,7 +44,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
   scroll-padding-top: 1.5rem;
 }
 
@@ -334,7 +333,7 @@ p {
 .text-link {
   font-weight: 800;
   font-size: .85rem;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .page-intro {
@@ -436,6 +435,18 @@ p {
   font-weight: 500;
   letter-spacing: 0;
 }
+
+/* Endterm states keep the original paper / sage / orange palette. */
+[hidden] { display: none !important; }
+.field-error { color: #96351f; font-size: .8rem; margin: .4rem 0 0; }
+.field-error:empty { display: none; }
+.empty-state { padding: 2rem; background: var(--sage); border-radius: var(--radius); }
+.kit-card { transition: border-color .18s, box-shadow .18s; }
+.kit-card:hover, .kit-card:focus-within { border-color: var(--green); box-shadow: 0 6px 20px #294c4212; }
+.form-control, .form-select { min-width: 0; max-width: 100%; }
+fieldset { min-width: 0; }
+input[type='checkbox'], input[type='radio'] { accent-color: var(--green); }
+body { overflow-wrap: break-word; }
 
 .callout {
   display: flex;
