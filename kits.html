@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="RentKit: ready-to-use equipment kits for creative projects, podcasts, movie nights and presentations.">
+  <title>Browse Kits | RentKit</title>
+  <script>try{var t=JSON.parse(localStorage.getItem('rentkit-theme'));document.documentElement.dataset.theme=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/kits.css">
+
+  <script src="vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/catalog.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="RentKit home"><img class="brand-mark" src="images/favicon.svg"
+          alt="" width="35" height="35">RentKit<span class="brand-dot">.</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="kits.html" aria-current="page">Browse Kits</a></li>
+          <li><a href="kit-details.html">Inside the Kits</a></li>
+          <li><a href="rent.html">How It Works & FAQ</a></li>
+          <li><a href="order.html" class="btn btn-primary">Book a kit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+
+    <div class="container">
+      <header class="page-intro">
+        <p class="eyebrow">Eight kits. Plenty of possibilities.</p>
+        <h1>What do you<br>want to make happen?</h1>
+        <p class="lead">Start with your plan. We’ve put the equipment together so you can focus on the good part.</p>
+      </header>
+      <nav class="anchor-nav" aria-label="Jump to a kit"><a href="#video">Film a project</a><a href="#podcast">Record a
+          podcast</a><a href="#movie">Plan a movie night</a><a href="#presentation">Give a presentation</a></nav>
+      <section aria-labelledby="catalog-title">
+        <h2 id="catalog-title" class="visually-hidden">All equipment kits</h2>
+        <form id="catalog-controls" class="catalog-controls" role="search" aria-label="Find equipment">
+          <div><label class="form-label" for="search">Search equipment</label><input class="form-control" id="search" type="search" placeholder="Try microphone or projector"></div>
+          <div><label class="form-label" for="category">Category</label><select id="category" class="form-select"><option value="all">All categories</option><option value="video">Video</option><option value="audio">Audio</option><option value="cinema">Cinema</option><option value="presentation">Presentation</option></select></div>
+          <div><label class="form-label" for="budget">Daily budget</label><select id="budget" class="form-select"><option value="100000">Any price</option><option value="3000">Up to 3 000 ₸</option><option value="5000">Up to 5 000 ₸</option><option value="7000">Up to 7 000 ₸</option></select></div>
+          <div><label class="form-label" for="sort">Sort by</label><select id="sort" class="form-select"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name">Name: A–Z</option><option value="rating">Top rated</option></select></div>
+          <div class="catalog-toggles"><label class="saved-toggle"><input type="checkbox" id="saved-only"> <span>♥ Saved only</span></label><button type="button" class="btn btn-outline" data-reset-catalog>Reset filters</button></div>
+        </form>
+        <p id="result-count" role="status" aria-live="polite"></p>
+        <noscript><p>Enable JavaScript to search the catalogue. You can still <a href="kit-details.html">view kit contents and prices</a>.</p></noscript>
+        <div id="catalog-empty" class="empty-state" hidden><h3>No kits match your plan yet.</h3><p>Try a shorter search or a larger budget.</p><button type="button" class="btn btn-outline" data-reset-catalog>Show all kits</button></div>
+        <div class="catalog-grid" id="catalog-grid"></div>
+        <p class="small-note">Tip: open <strong>Quick view</strong> to choose a rental period, tick <strong>Compare</strong> on up to three kits, or tap ♡ to save a kit for later. The contents list defines exactly what each kit includes.</p>
+        <p class="small-note catalog-note">Prices in KZT. Each displayed price covers one day. <a
+            href="kit-details.html#prices">Compare total prices for 1, 3 and 7 days.</a></p>
+      </section>
+      <section class="section">
+        <div class="callout">
+          <div>
+            <p class="eyebrow">A little help choosing</p>
+            <h2>Same projector. Different plan.</h2>
+            <p class="muted">Movie night adds a portable screen and speaker. Presentation adds a clicker and laptop
+              adapters. Choose the setup that fits your task, then check your connections.</p>
+          </div><a class="btn btn-outline" href="kit-details.html">Compare the contents <span
+              aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div><a class="brand" href="index.html">RentKit<span class="brand-dot">.</span></a>
+          <p class="muted">Rent the kit. Make it happen.</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation"><a href="kits.html">Browse Kits</a><a
+            href="rent.html">How It Works & FAQ</a><a href="order.html">Book a kit</a><a href="kit-details.html">Inside
+            the Kits</a></nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="muted">Astana, Kazakhstan · 2026</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560">
+ <title>Video Project Kit flat lay</title><desc>An empty phone tripod, LED panel, microphone, cables and adapters.</desc>
+ <defs><pattern id="mesh" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#aab0a2"/><path d="M0 3h7M3 0v7" stroke="#6e7869"/></pattern></defs>
+ <rect width="800" height="560" fill="#e7e8de"/><path d="M32 32h25M32 32v25M768 32h-25M768 32v25M32 528h25M32 528v-25M768 528h-25M768 528v-25" stroke="#b9c1b2" stroke-width="2" fill="none"/>
+ <g transform="rotate(-10 252 285)"><ellipse cx="254" cy="449" rx="133" ry="13" fill="#d1d6c9"/>
+ <path d="M255 238v184M252 285l-87 156M261 285l82 157" fill="none" stroke="#3b493b" stroke-width="15" stroke-linecap="round"/><path d="M257 272v133" stroke="#85917c" stroke-width="5"/><rect x="243" y="251" width="26" height="34" rx="5" fill="#202c24"/>
+ <rect x="194" y="153" width="120" height="77" rx="10" fill="#495a46" stroke="#243126" stroke-width="5"/><rect x="211" y="166" width="87" height="48" rx="5" fill="#d9decf"/><path d="M215 172v36M294 172v36" stroke="#1f2f24" stroke-width="8"/><rect x="240" y="229" width="28" height="26" rx="4" fill="#6a795f"/>
+ </g>
+ <g transform="rotate(7 555 218)"><ellipse cx="555" cy="316" rx="120" ry="11" fill="#d1d6c9"/><rect x="445" y="124" width="220" height="156" rx="14" fill="#425140" stroke="#202f23" stroke-width="4"/><rect x="462" y="140" width="186" height="119" rx="7" fill="#fcf2cf"/>
+ <path d="M476 161h158M476 184h158M476 207h158M476 230h158M492 150v98M520 150v98M548 150v98M576 150v98M604 150v98M632 150v98" stroke="#e5d8b8" stroke-width="3"/><path d="M535 281v25h40v-25M555 306v18" stroke="#526147" stroke-width="8" fill="none"/>
+ </g>
+ <g transform="rotate(-14 460 420)"><rect x="400" y="364" width="49" height="60" rx="18" fill="url(#mesh)" stroke="#48513f" stroke-width="3"/><rect x="414" y="419" width="22" height="46" rx="5" fill="#33432f"/><path d="M426 465c0 36 80 12 66-19" stroke="#516246" stroke-width="5" fill="none"/></g>
+ <g fill="none" stroke="#47553f" stroke-width="6"><ellipse cx="615" cy="399" rx="46" ry="38"/><ellipse cx="615" cy="399" rx="34" ry="26"/><path d="M658 415v35h-29"/></g><rect x="604" y="443" width="31" height="15" rx="3" fill="#f36b32"/><rect x="539" y="453" width="27" height="16" rx="3" fill="#7a846b"/>
+ <g fill="#53634c" font-family="Arial,sans-serif" font-size="13" letter-spacing="1"><text x="98" y="100">01 / PHONE TRIPOD</text><text x="472" y="87">02 / LED LIGHT</text><text x="347" y="505">03 / MIC</text><text x="553" y="505">04 / CABLES</text></g>
+</svg>
