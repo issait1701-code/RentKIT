@@ -315,3 +315,5 @@
     gap: 1.2rem;
   }
 }
+/* Endterm 2: illustration replaces the photo, so it fills its half of the card. */
+.rental-note img[src$='.svg'] { object-fit: cover; background: #dfe6eb; }

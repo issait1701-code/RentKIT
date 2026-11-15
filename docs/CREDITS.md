@@ -4,16 +4,7 @@ This file lists the external resources used in the RentKit student project.
 
 ## Images
 
-### Projector Photo
-
-The projector photo is used as an illustrative image for projector equipment.
-
-- File: `images/projector-photo.jpg`
-- Title: A White Projector
-- Author: Jens Mahnke
-- Source: https://www.pexels.com/photo/a-white-projector-6062806/
-- License: https://www.pexels.com/license/
-
+All images are original SVG illustrations made for this project. The earlier projector photograph (`images/projector-photo.jpg`) was removed in the second Endterm update because the picture showed a manufacturer's branded product and could not be matched to the credited source; the home page now uses the original `images/projector-kit.svg` illustration instead.
 
 ## SVG Illustrations
 
@@ -24,6 +15,7 @@ The following SVG illustrations were created specifically for the RentKit projec
 - `images/podcast-kit.svg`
 - `images/movie-kit.svg`
 - `images/presentation-kit.svg`
+- `images/light-kit.svg`, `images/solo-kit.svg`, `images/projector-kit.svg`, `images/speaker-kit.svg` (added in Endterm update 2, one per smaller kit; created with Claude, Anthropic)
 - `images/favicon.svg`
 
 
@@ -79,6 +71,10 @@ OpenAI Codex was used as an assistant for project ideas and implementation. Its 
 
 AI assistance included implementation code as well as suggestions and explanations. External images, fonts and libraries are credited separately. The team is responsible for checking the final submission and understanding the code it presents.
 
+## AI assistance — Endterm update 2 (15.11.2026)
+
+Claude (Anthropic) was used for the second Endterm update: fixing the missing illustrations of kits 5–8 on the details page, drawing four new kit SVGs, the redesigned quick-view dialog (based on the team's own `openDetail` draft), saved kits, kit comparison, dark theme, home statistics, the Node unit tests and browser smoke test, screenshots and this documentation update. The team reviewed the changes and is responsible for explaining them.
+
 ## Team responsibility split
 
 The following is an approximately equal allocation of responsibility for the project and defense; it is not a claim of exclusive authorship of every line of code.
@@ -98,7 +94,7 @@ Both participants share responsibility for reviewing integration, checking links
 - Local file: `vendor/jquery-3.7.1.min.js`; its copyright/license reference remains in the bundled header. The separate downloaded license text is no longer present in this copy.
 - Copyright: OpenJS Foundation and other contributors; MIT license.
 
-The four smaller kits reuse existing equipment-family illustrations with an explicit contents-list explanation. No downloaded website theme was used.
+Each of the eight kits now has its own illustration. No downloaded website theme was used.
 
 ## Source provenance
 

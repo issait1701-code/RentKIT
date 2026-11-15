@@ -25,12 +25,14 @@ On the development computer, Python is also available as `C:/msys64/ucrt64/bin/p
 | `rent.html` | Rental process, conditions and animated accessible FAQ |
 | `css/` | Shared design and page-specific styles |
 | `js/data.js` | Eight kit objects, search, calculation, date and validation functions |
-| `js/catalog.js` | Catalogue DOM rendering and event handlers |
-| `js/details.js` | Additional kit descriptions and shared-data price table |
+| `js/catalog.js` | Catalogue cards, quick view dialog, saved kits filter, compare bar and compare table |
+| `js/details.js` | Kits 5–8 sections (with illustrations) and the shared-data price table |
+| `js/home.js` | Home statistics calculated from the data, animated with jQuery |
 | `js/order.js` | Form, inline errors, summary and local packing checklist |
-| `js/site.js` | jQuery FAQ, message fade and anchor scrolling |
+| `js/site.js` | Saved kits store, dark/light theme, toast, back-to-top, sticky header; jQuery FAQ, message fade and anchor scrolling |
+| `tests/` | `data.test.js` (Node unit tests) and `browser_check.py` (optional Playwright smoke test) |
 | `images/`, `fonts/`, `vendor/` | Existing local assets, dependencies and licenses |
-| `screenshots/endterm/` | New browser screenshots; original Midterm screenshots retained |
+| `docs/screenshots/` | 15 screenshots of the current version (desktop, dark theme, mobile) |
 | `docs/` | README, credits, updated report text, editable Word report and archived Midterm document |
 
 ## Changes after Midterm
@@ -44,11 +46,25 @@ On the development computer, Python is also available as `C:/msys64/ucrt64/bin/p
 - Added three jQuery effects (`slideToggle`, `fadeIn`, `animate`), queue cleanup with `stop(true, true)`, reduced-motion support and visible hover/focus/error/success/empty states.
 - Added documentation and performed automated checks during development. The test utilities and result log were later removed from this submission.
 
+## Endterm update 2 (15.11.2026)
+
+- **Bug fixed:** on *Inside the Kits* the four smaller kits (Light & Tripod, Solo Recording, Projector Essentials, Presenter Accessories) were rendered without a picture. They now use the same layout as kits 1–4, with their own illustration, checklist and booking link.
+- **New illustrations:** `light-kit.svg`, `solo-kit.svg`, `projector-kit.svg`, `speaker-kit.svg` — every kit now has a unique picture. The branded projector photo was replaced by an original illustration.
+- **Quick view:** a two-column dialog with rating, included items, setup steps, “good for” chips, a 1/3/7-day period picker with total and savings, optional delivery, previous/next kit (buttons or ← →), save button; jQuery `fadeTo`/`animate`, focus trap, Esc and overlay close, focus returned to the trigger. Its *Book* link passes kit, days and delivery to the order form.
+- **Saved kits (♥):** stored in `localStorage`, counter in the header, “Saved only” filter and `kits.html?saved=1` link.
+- **Compare:** tick up to three kits; a sliding bar opens a comparison table that highlights the lowest price and best rating.
+- **Design refresh:** sticky blurred header, card hover lift and image zoom, ratings, item chips, setup time, “Popular” badges, toasts, back-to-top button, per-day prices in the price table.
+- **Pickup / delivery address:** choosing *Pickup* shows our pickup point (Kabanbay Batyr Ave 62, Astana, hours, map link); choosing *Delivery* slides open an address form (street and building, apartment, time window, courier note) with validation. The summary and confirmation show the chosen address.
+- **Navigation always on top:** the header is sticky on every screen size; below 900 px the links fold behind a ☰ menu button (jQuery `slideDown`/`slideUp`, `aria-expanded`, Esc closes).
+- **Dark theme:** toggle in the header; remembers the choice and follows the system setting by default.
+- **Home statistics:** number of kits, average rating, reviews and lowest price are calculated from `data.js` and counted up with jQuery `animate`.
+- **Tests:** `node --test tests/*.test.js` (6 unit test groups, no packages needed) and `python tests/browser_check.py` (5 pages × 3 widths: JS errors, broken images, horizontal scroll, plus the quick view / saved / compare / order flows).
+
 ## Verification status
 
-An earlier development run completed 181 static checks with 0 errors and 220 browser assertions with 0 failures. It covered the five pages at 375, 768 and 1280 CSS pixels. These are historical results, not a fresh verification of the current copy.
+Latest run (15.11.2026): `node --test tests/*.test.js` — 7 passed, 0 failed; `tests/browser_check.py` in headless Chrome — 0 failures across 375, 768 and 1280 px. An earlier development run completed 181 static checks with 0 errors and 220 browser assertions with 0 failures. It covered the five pages at 375, 768 and 1280 CSS pixels. These are historical results, not a fresh verification of the current copy.
 
-The automated test scripts, result log and separate testing notes have been removed. The current workspace contains no repeatable automated test suite. Fifteen screenshots remain in `screenshots/endterm/`. Restore the tests separately if they are required as submission deliverables.
+Repeatable tests are included again in `tests/`. Fifteen current screenshots are in `docs/screenshots/`.
 
 For a current manual check, load all five pages, test search/filter/sort and empty results, submit an incomplete form and correct its errors, confirm a valid demo booking, check package prices and delivery, reload a marked checklist, and inspect the browser console and the three target viewport sizes. Earlier checks used headless Chrome, not physical devices or a full screen-reader audit.
 

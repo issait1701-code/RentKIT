@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560">
+ <title>Projector Essentials Kit flat lay</title><desc>A compact projector beside a coiled HDMI cable and a power cable.</desc>
+ <defs><linearGradient id="beam" x1="0" x2="1"><stop offset="0" stop-color="#fffbe6" stop-opacity=".95"/><stop offset="1" stop-color="#fffbe6" stop-opacity="0"/></linearGradient></defs>
+ <rect width="800" height="560" fill="#dfe6eb"/><path d="M32 32h25M32 32v25M768 32h-25M768 32v25M32 528h25M32 528v-25M768 528h-25M768 528v-25" stroke="#b6c3cc" stroke-width="2" fill="none"/>
+ <path d="M330 220L760 110v240z" fill="url(#beam)"/>
+ <g transform="rotate(-4 230 250)"><ellipse cx="236" cy="352" rx="170" ry="16" fill="#c9d4db"/>
+  <rect x="80" y="160" width="300" height="180" rx="28" fill="#f6f4ee" stroke="#3a4a52" stroke-width="5"/><rect x="80" y="292" width="300" height="48" rx="0" fill="#e2e0d8"/><path d="M80 292h300" stroke="#3a4a52" stroke-width="4"/>
+  <circle cx="300" cy="240" r="58" fill="#3a4a52"/><circle cx="300" cy="240" r="40" fill="#22313a"/><circle cx="300" cy="240" r="22" fill="#6fa2b6"/><circle cx="292" cy="232" r="7" fill="#d7eef5"/>
+  <path d="M112 196h110M112 214h90M112 232h110" stroke="#c4cbc9" stroke-width="7" stroke-linecap="round"/><circle cx="210" cy="268" r="7" fill="#f36b32"/><rect x="110" y="340" width="34" height="14" rx="3" fill="#3a4a52"/><rect x="316" y="340" width="34" height="14" rx="3" fill="#3a4a52"/>
+ </g>
+ <g fill="none" stroke="#2f3d45" stroke-width="7"><ellipse cx="300" cy="455" rx="66" ry="38"/><ellipse cx="300" cy="455" rx="50" ry="27"/><path d="M364 465c40 10 60 -10 92 -6"/></g><rect x="452" y="450" width="34" height="18" rx="3" fill="#f36b32"/>
+ <g fill="none" stroke="#56656d" stroke-width="7"><ellipse cx="610" cy="440" rx="58" ry="32"/><ellipse cx="610" cy="440" rx="42" ry="22"/><path d="M552 448c-30 6 -40 30 -70 30"/></g><rect x="660" y="430" width="40" height="28" rx="5" fill="#3a4a52"/><path d="M700 438h14M700 450h14" stroke="#3a4a52" stroke-width="5"/>
+ <g fill="#4d5d66" font-family="Arial,sans-serif" font-size="13" letter-spacing="1"><text x="98" y="110">01 / PROJECTOR</text><text x="230" y="520">02 / HDMI CABLE</text><text x="560" y="520">03 / POWER CABLE</text></g>
+</svg>

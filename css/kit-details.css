@@ -196,3 +196,8 @@
     padding: .8rem;
   }
 }
+/* Endterm 2: price table helpers and hover zoom for illustrations */
+.per-day { display: block; color: var(--muted); font-size: .72rem; }
+.detail-visual { overflow: hidden; box-shadow: var(--shadow-sm); }
+.detail-visual img { transition: transform .5s ease; }
+.detail-visual:hover img { transform: scale(1.03); }

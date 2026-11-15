@@ -6,7 +6,7 @@ Repository: https://github.com/issait1701-code/RentKIT
 Verified publication URL: [fill in after deployment]  
 Participants: Saitov Islambek; Jomart Akylbek  
 Group: IT-2507  
-Submission date: 08.11.2026
+Submission date: 08.11.2026 (updated 15.11.2026)
 
 ## Objective
 
@@ -27,6 +27,79 @@ Extend the existing Midterm equipment rental site into an interactive Endterm su
 | Useful original addition | Kit-specific personal packing checklist, progress counter, reset and optional browser persistence |
 | Responsive and accessible UI | Semantic headings, image alt, labels, skip link, keyboard focus, invalid-field state and live announcements |
 | Organization and documentation | Separate CSS/JS/assets, vendor license information, README, credits, editable Word report, report text and screenshots |
+
+## Endterm update 2 (15.11.2026)
+
+| Change | Where |
+| --- | --- |
+| Bug fix: kits 5–8 had no picture on *Inside the Kits* | `js/details.js` now builds the same figure + list + checklist layout as kits 1–4 |
+| Four new original illustrations, one per smaller kit; branded photo replaced | `images/light-kit.svg`, `solo-kit.svg`, `projector-kit.svg`, `speaker-kit.svg` |
+| Quick view dialog (developed from the team's `openDetail` draft) | `js/catalog.js` → `openModal()`, `openDetail()`; styles in `css/kits.css` |
+| Rental period picker with total, saving and delivery; Book link passes `kit`, `days`, `method` | `js/catalog.js`, `js/order.js` |
+| Saved kits (♥) with header counter and filter | `js/site.js` (`RentKitFavorites`), `js/catalog.js` |
+| Compare up to three kits | `js/catalog.js` → `openCompare()` |
+| Dark theme, toast, back-to-top, sticky header | `js/site.js`, `css/styles.css` |
+| Pickup shows our address (Kabanbay Batyr Ave 62); Delivery opens a validated address form | `order.html`, `js/order.js` → `syncMethod()`, `js/data.js` → `validate()` |
+| Header always on top; ☰ menu below 900 px | `js/site.js`, `css/styles.css` |
+| Home statistics counted up with jQuery `animate` | `js/home.js`, `index.html` |
+| Repeatable tests | `tests/data.test.js`, `tests/browser_check.py` |
+
+**jQuery used in the update:** `fadeTo`/`fadeOut` (dialog overlay), `animate` on `opacity`/`marginTop` (dialog), `slideDown`/`slideUp` (compare bar), `delay().animate()` (card fade-in), `animate` on a plain object (number counter), `stop(true, true)` everywhere to avoid queues. All animations are skipped when the user prefers reduced motion.
+
+**Accessibility of the dialog:** `role="dialog"`, `aria-modal`, `aria-labelledby`, focus moved into the dialog and trapped with Tab/Shift+Tab, Esc and overlay click close it, focus returns to the button that opened it; the period picker is a `radiogroup` with arrow-key support.
+
+### Screenshots
+
+![Home page with sticky header, saved counter and theme switch](screenshots/01-home.png)
+*1. Home page with sticky header, saved counter and theme switch*
+
+![Statistics calculated from the kit data](screenshots/02-home-stats-kits.png)
+*2. Statistics calculated from the kit data*
+
+![Redesigned catalogue: rating, chips, Popular badge, save and compare](screenshots/03-catalog-cards.png)
+*3. Redesigned catalogue: rating, chips, Popular badge, save and compare*
+
+![Quick view: 3-day period selected, total and saving](screenshots/04-quick-view.png)
+*4. Quick view: 3-day period selected, total and saving*
+
+![Compare bar with three selected kits](screenshots/05-compare-bar.png)
+*5. Compare bar with three selected kits*
+
+![Comparison table with best price and rating highlighted](screenshots/06-compare-table.png)
+*6. Comparison table with best price and rating highlighted*
+
+![Saved kits filter](screenshots/07-saved-filter.png)
+*7. Saved kits filter*
+
+![Fixed: kit 05 on Inside the Kits now has its illustration](screenshots/08-details-fixed-photo.png)
+*8. Fixed: kit 05 on Inside the Kits now has its illustration*
+
+![Price table with per-day value](screenshots/09-price-table.png)
+*9. Price table with per-day value*
+
+![Order form pre-filled from quick view (kit, 3 days, delivery)](screenshots/10-order-prefilled.png)
+*10. Order form pre-filled from quick view (kit, 3 days, delivery)*
+
+![How It Works & FAQ](screenshots/11-how-it-works.png)
+*11. How It Works & FAQ*
+
+![Dark theme — home](screenshots/12-dark-home.png)
+*12. Dark theme — home*
+
+![Dark theme — quick view](screenshots/13-dark-quick-view.png)
+*13. Dark theme — quick view*
+
+![Mobile catalogue (390 px)](screenshots/14-mobile-catalog.png)
+*14. Mobile catalogue (390 px)*
+
+![Mobile quick view](screenshots/15-mobile-quick-view.png)
+*15. Mobile quick view*
+
+![Pickup address](screenshots/16-pickup-address.png)
+*16. Pickup shows our address*
+
+![Delivery form](screenshots/17-delivery-form.png)
+*17. Delivery opens the address form; the summary shows the address*
 
 ## Pages and files changed
 
@@ -56,6 +129,9 @@ Validation keeps visible errors beside the relevant controls, sets `aria-invalid
 Native HTML FAQ remains usable without jQuery. Animation handlers finish previous animations before starting new ones and respect reduced motion. Local assets allow the normal site to run without external CDN requests.
 
 ## Verification
+
+Latest run on 15 November 2026: `node --test tests/*.test.js` — 7 passed, 0 failed. `python tests/browser_check.py` in headless Chrome — 0 failures (5 pages × 375/768/1280 px: no JavaScript errors, no broken images, no horizontal scroll; quick view, saved kits, compare and pre-filled order flows).
+
 
 During the earlier implementation run on 8 November 2026, 181 static checks completed with 0 errors and 220 browser assertions passed with 0 failures. These are historical results from the development session, not a new test execution or verification of the current submission.
 
